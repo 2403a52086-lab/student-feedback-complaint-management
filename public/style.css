@@ -1,0 +1,540 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f7fc;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #163b70;
+    color: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    font-size: 22px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #ffd166;
+}
+
+/* Home Section */
+.hero {
+    min-height: 400px;
+    background: linear-gradient(135deg, #163b70, #2878c7);
+    color: white;
+    text-align: center;
+    padding: 110px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ffd166;
+    color: #163b70;
+    padding: 13px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.about h2,
+.login h2 {
+    color: #163b70;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* Login Section */
+.login {
+    text-align: center;
+    padding: 50px 20px 75px;
+}
+
+.login-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.card {
+    background: white;
+    width: 280px;
+    padding: 35px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card h3 {
+    color: #163b70;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 22px;
+    line-height: 1.5;
+}
+
+.card button {
+    background-color: #2166b1;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #163b70;
+}
+
+/* Login Forms */
+.form-box {
+    display: none;
+    background: white;
+    max-width: 420px;
+    margin: 40px auto;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+    animation: appear 0.4s ease;
+}
+
+.form-box h2 {
+    color: #163b70;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 15px;
+    border: 1px solid #d0d7e2;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-box input:focus {
+    border-color: #2166b1;
+}
+
+.form-box button {
+    background: #2166b1;
+    color: white;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.form-box button:hover {
+    background: #163b70;
+}
+
+.form-box p {
+    margin-top: 15px;
+    color: #333;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #163b70;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Student and Admin Dashboard */
+.dashboard {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.dashboard h1 {
+    color: #163b70;
+    margin-bottom: 10px;
+}
+
+.dashboard-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.dashboard-cards .card,
+.dashboard-card {
+    flex: 1;
+    min-width: 180px;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+}
+
+.dashboard button {
+    background: #2166b1;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.dashboard button:hover {
+    background: #163b70;
+}
+
+.dashboard .form-box {
+    display: none;
+    text-align: left;
+}
+
+.dashboard textarea,
+.dashboard select {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 15px;
+    border: 1px solid #d0d7e2;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Complaint Cards */
+.complaint-card {
+    background: white;
+    border: 1px solid #dce4ef;
+    border-left: 5px solid #2166b1;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.complaint-card h3 {
+    color: #163b70;
+    margin-bottom: 12px;
+}
+
+.complaint-card p {
+    margin: 8px 0;
+    color: #444;
+}
+
+.complaint-card select,
+.complaint-card button {
+    margin: 8px 8px 8px 0;
+    padding: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .hero {
+        padding: 85px 15px;
+    }
+
+    .form-box {
+        width: 95%;
+        padding: 25px;
+    }
+}
+
+
+
+#searchComplaint,
+#statusFilter {
+    padding: 12px;
+    margin: 10px 5px 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+#searchComplaint {
+    width: 60%;
+    max-width: 450px;
+}
+
+
+/* Feedback and Complaint System additions */
+.dashboard-panel {
+    width: 100%;
+    max-width: 760px;
+}
+
+.dashboard-panel form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dashboard-panel input,
+.dashboard-panel select,
+.dashboard-panel textarea {
+    width: 100%;
+    padding: 13px;
+    margin: 5px 0 12px;
+    border: 1px solid #d0d7e2;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.dashboard-panel label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    color: #163b70;
+    margin-top: 8px;
+}
+
+.form-description {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.message {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.history-box {
+    margin: 15px 0;
+    padding: 12px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.history-box p {
+    margin: 8px 0;
+}
+
+.latest-history {
+    color: green;
+    font-weight: bold;
+}
+
+.feedback-card {
+    border-left-color: #2e8b57;
+}
+
+.feedback-rating {
+    color: #d97706 !important;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.section-heading {
+    margin-top: 45px;
+}
+
+.chart-card canvas {
+    cursor: pointer;
+}
+
+.chart-hint {
+    color: #777;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.result-count {
+    margin: 5px 0 15px;
+    color: #555;
+    font-weight: bold;
+}
+
+#searchComplaint,
+#statusFilter,
+#categoryFilter,
+#priorityFilter,
+#searchFeedback,
+#feedbackCategoryFilter,
+#feedbackRatingFilter {
+    padding: 12px;
+    margin: 10px 5px 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background: white;
+}
+
+#searchComplaint,
+#searchFeedback {
+    width: 60%;
+    max-width: 450px;
+}
+
+.chart-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.chart-modal-content {
+    background: white;
+    width: 90%;
+    max-width: 850px;
+    padding: 25px;
+    border-radius: 12px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.chart-modal-content h2 {
+    color: #163b70;
+    margin: 15px 70px 20px 0;
+}
+
+.close-chart {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    padding: 8px 12px;
+    background: #2166b1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.large-chart-area {
+    height: 450px;
+    max-height: 65vh;
+}
+
+@media (max-width: 700px) {
+    .dashboard {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .dashboard-cards .card,
+    .dashboard-card {
+        min-width: 100%;
+    }
+
+    #searchComplaint,
+    #searchFeedback {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #statusFilter,
+    #categoryFilter,
+    #priorityFilter,
+    #feedbackCategoryFilter,
+    #feedbackRatingFilter {
+        width: 100%;
+        margin: 5px 0 12px;
+    }
+
+    .chart-modal-content {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .large-chart-area {
+        height: 350px;
+    }
+}

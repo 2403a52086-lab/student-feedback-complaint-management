@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | Feedback and Complaints</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>Student Feedback and Complaint Management System</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <button onclick="logout()">Logout</button>
+        </nav>
+    </header>
+
+    <section class="dashboard">
+        <h1>Welcome, <span id="studentName">Student</span>!</h1>
+        <p>Share your feedback and manage your college-related complaints.</p>
+
+        <div class="dashboard-cards">
+            <div class="card">
+                <h3>Submit Complaint</h3>
+                <p>Report a college-related problem.</p>
+                <button onclick="showDashboardSection('complaintSection')">Submit Complaint</button>
+            </div>
+
+            <div class="card">
+                <h3>My Complaints</h3>
+                <p>View complaint status, priority and admin remarks.</p>
+                <button onclick="showDashboardSection('myComplaintsSection'); loadMyComplaints();">View Complaints</button>
+            </div>
+
+            <div class="card">
+                <h3>Submit Feedback</h3>
+                <p>Rate teaching, faculty, labs and facilities.</p>
+                <button onclick="showDashboardSection('feedbackSection')">Give Feedback</button>
+            </div>
+
+            <div class="card">
+                <h3>My Feedback</h3>
+                <p>View the feedback you have submitted.</p>
+                <button onclick="showDashboardSection('myFeedbackSection'); loadMyFeedback();">View Feedback</button>
+            </div>
+        </div>
+
+        <!-- Complaint Form -->
+        <div class="form-box dashboard-panel" id="complaintSection">
+            <h2>Submit a Complaint</h2>
+            <form id="complaintForm">
+                <input type="text" id="complaintTitle" placeholder="Complaint Title" required>
+
+                <select id="complaintCategory" required>
+                    <option value="">Select Complaint Category</option>
+                    <option value="Academic">Academic</option>
+                    <option value="Hostel">Hostel</option>
+                    <option value="Facilities">Facilities</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <textarea id="complaintDescription" placeholder="Describe your complaint" rows="5" required></textarea>
+                <button type="submit">Submit Complaint</button>
+            </form>
+            <p id="complaintMessage" class="message"></p>
+        </div>
+
+        <!-- My Complaints -->
+        <div class="form-box dashboard-panel" id="myComplaintsSection">
+            <h2>My Complaints</h2>
+            <div id="complaintsList"><p>Your complaints will appear here.</p></div>
+        </div>
+
+        <!-- Feedback Form -->
+        <div class="form-box dashboard-panel" id="feedbackSection">
+            <h2>Submit Student Feedback</h2>
+            <p class="form-description">Your feedback helps the college understand student experiences and improve facilities.</p>
+
+            <form id="feedbackForm">
+                <label for="feedbackType">Feedback About</label>
+                <select id="feedbackType" required>
+                    <option value="">Select Feedback Category</option>
+                    <option value="Teaching">Teaching</option>
+                    <option value="Faculty">Faculty</option>
+                    <option value="Laboratory">Laboratory</option>
+                    <option value="Classroom">Classroom</option>
+                    <option value="Infrastructure">Infrastructure</option>
+                    <option value="Library">Library</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <input type="text" id="feedbackSubject" placeholder="Subject / Course (optional)">
+                <input type="text" id="facultyName" placeholder="Faculty Name (optional)">
+
+                <label for="feedbackRating">Give Rating (1 = Poor, 5 = Excellent)</label>
+                <select id="feedbackRating" required>
+                    <option value="">Select Rating</option>
+                    <option value="1">1 - Poor</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="3">3 - Good</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+
+                <textarea id="feedbackComments" rows="5" placeholder="Write your feedback..." required></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+            <p id="feedbackMessage" class="message"></p>
+        </div>
+
+        <!-- My Feedback -->
+        <div class="form-box dashboard-panel" id="myFeedbackSection">
+            <h2>My Submitted Feedback</h2>
+            <div id="feedbackList"><p>Your submitted feedback will appear here.</p></div>
+        </div>
+    </section>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

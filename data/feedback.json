@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1793454343031",
+    "studentName": "nandhu",
+    "studentEmail": "nandhu@gmail.com",
+    "rollNumber": "86",
+    "feedbackType": "Classroom",
+    "subject": "cse (aiml)",
+    "facultyName": "",
+    "rating": 1,
+    "comments": "for cse(aiml) batch 5 and 6 classroom was not at all good there is no ventilation its very suffocating .please change that class for our batch.",
+    "createdAt": "2026-10-31T13:45:43.032Z"
+  },
+  {
+    "id": "1793467976776",
+    "studentName": "nandhu",
+    "studentEmail": "nandhu@gmail.com",
+    "rollNumber": "86",
+    "feedbackType": "Faculty",
+    "subject": "ai",
+    "facultyName": "hello",
+    "rating": 3,
+    "comments": "good",
+    "createdAt": "2026-10-31T17:32:56.776Z"
+  }
+]

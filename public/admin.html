@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Feedback and Complaints</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <h2>Student Feedback and Complaint Management System</h2>
+        <button onclick="adminLogout()">Logout</button>
+    </header>
+
+    <main class="dashboard">
+        <h1>Admin Dashboard</h1>
+        <p>Manage student complaints and review student feedback.</p>
+
+        <!-- Complaint Statistics -->
+        <h2>Complaint Overview</h2>
+        <div class="dashboard-cards">
+            <div class="dashboard-card">
+                <h3>Total Complaints</h3>
+                <h2 id="totalComplaints">0</h2>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Pending Complaints</h3>
+                <h2 id="pendingComplaints">0</h2>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Resolved Complaints</h3>
+                <h2 id="resolvedComplaints">0</h2>
+            </div>
+        </div>
+
+        <!-- Complaint Analytics -->
+        <h2>Complaint Analytics</h2>
+        <div class="dashboard-cards">
+            <div class="dashboard-card chart-card">
+                <h3>Status-wise Complaints</h3>
+                <canvas id="statusChart"></canvas>
+                <p class="chart-hint">Click chart to enlarge</p>
+            </div>
+
+            <div class="dashboard-card chart-card">
+                <h3>Category-wise Complaints</h3>
+                <canvas id="categoryChart"></canvas>
+                <p class="chart-hint">Click chart to enlarge</p>
+            </div>
+
+            <div class="dashboard-card chart-card">
+                <h3>Priority-wise Complaints</h3>
+                <canvas id="priorityChart"></canvas>
+                <p class="chart-hint">Click chart to enlarge</p>
+            </div>
+        </div>
+
+        <!-- All Complaints -->
+        <h2>All Student Complaints</h2>
+
+        <input type="text" id="searchComplaint"
+            placeholder="Search by ID, email, title or category...">
+
+        <select id="statusFilter">
+            <option value="All">All Complaints</option>
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Resolved">Resolved</option>
+        </select>
+
+        <select id="categoryFilter">
+            <option value="All">All Categories</option>
+            <option value="Academic">Academic</option>
+            <option value="Hostel">Hostel</option>
+            <option value="Facilities">Facilities</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <select id="priorityFilter">
+            <option value="All">All Priorities</option>
+            <option value="High">High Priority</option>
+            <option value="Medium">Medium Priority</option>
+            <option value="Low">Low Priority</option>
+        </select>
+
+        <p id="complaintResultCount" class="result-count"></p>
+        <div id="adminComplaintsList">Loading complaints...</div>
+
+        <!-- Feedback Overview -->
+        <h2 class="section-heading">Student Feedback Overview</h2>
+
+        <div class="dashboard-cards">
+            <div class="dashboard-card">
+                <h3>Total Feedback</h3>
+                <h2 id="totalFeedback">0</h2>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Average Rating</h3>
+                <h2 id="averageRating">0 / 5</h2>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>5-Star Feedback</h3>
+                <h2 id="fiveStarFeedback">0</h2>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>1-Star Feedback</h3>
+                <h2 id="oneStarFeedback">0</h2>
+            </div>
+        </div>
+
+        <!-- Feedback Analytics -->
+        <h2>Feedback Analytics</h2>
+
+        <div class="dashboard-cards">
+            <div class="dashboard-card chart-card">
+                <h3>Feedback Category-wise</h3>
+                <canvas id="feedbackCategoryChart"></canvas>
+                <p class="chart-hint">Click chart to enlarge</p>
+            </div>
+
+            <div class="dashboard-card chart-card">
+                <h3>Rating Distribution</h3>
+                <canvas id="ratingChart"></canvas>
+                <p class="chart-hint">Click chart to enlarge</p>
+            </div>
+        </div>
+
+        <!-- All Feedback -->
+        <h2>All Student Feedback</h2>
+
+        <input type="text" id="searchFeedback"
+            placeholder="Search by student, category, faculty or comments...">
+
+        <select id="feedbackCategoryFilter">
+            <option value="All">All Feedback Categories</option>
+            <option value="Teaching">Teaching</option>
+            <option value="Faculty">Faculty</option>
+            <option value="Laboratory">Laboratory</option>
+            <option value="Classroom">Classroom</option>
+            <option value="Infrastructure">Infrastructure</option>
+            <option value="Library">Library</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <select id="feedbackRatingFilter">
+            <option value="All">All Ratings</option>
+            <option value="5">5 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="2">2 Stars</option>
+            <option value="1">1 Star</option>
+        </select>
+
+        <p id="feedbackResultCount" class="result-count"></p>
+        <div id="adminFeedbackList">Loading feedback...</div>
+    </main>
+
+    <!-- Large Chart Popup -->
+    <div id="chartModal" class="chart-modal">
+        <div class="chart-modal-content">
+            <button id="closeChart" class="close-chart">
+                Close ✖
+            </button>
+
+            <h2 id="chartModalTitle">Chart</h2>
+
+            <div class="large-chart-area">
+                <canvas id="largeChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

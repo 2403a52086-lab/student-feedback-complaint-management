@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1793372393103",
+    "studentEmail": "nandhu@gmail.com",
+    "title": "water prblm",
+    "category": "Facilities",
+    "description": "drinking water is not available in college",
+    "status": "Resolved",
+    "adminRemarks": "done review",
+    "createdAt": "2026-10-30T14:59:53.104Z"
+  },
+  {
+    "id": "1793372755234",
+    "studentEmail": "nandhu@gmail.com",
+    "title": "water prblm",
+    "category": "Facilities",
+    "description": "drinking water is not available in college",
+    "status": "In Progress",
+    "createdAt": "2026-10-30T15:05:55.235Z",
+    "adminRemarks": "your complaint is in progress."
+  },
+  {
+    "id": "1793373924439",
+    "studentEmail": "nandhu@gmail.com",
+    "title": "water prblm",
+    "category": "Facilities",
+    "description": "drinking water is not available",
+    "status": "Pending",
+    "createdAt": "2026-10-30T15:25:24.439Z"
+  },
+  {
+    "id": "1793445756849",
+    "studentEmail": "nandhu@gmail.com",
+    "title": "hostel beds",
+    "category": "Hostel",
+    "description": "hostel beds are not good.",
+    "status": "Pending",
+    "createdAt": "2026-10-31T11:22:36.850Z"
+  },
+  {
+    "id": "1793467924388",
+    "studentEmail": "nandhu@gmail.com",
+    "title": "facilities.",
+    "category": "Facilities",
+    "description": "fans are not working properly.",
+    "status": "Pending",
+    "priority": "Medium",
+    "adminRemarks": "",
+    "createdAt": "2026-10-31T17:32:04.387Z",
+    "statusHistory": [
+      {
+        "status": "Pending",
+        "changedAt": "2026-10-31T17:32:04.387Z",
+        "note": "Complaint submitted"
+      }
+    ]
+  }
+]
